@@ -887,4 +887,32 @@
   }
 }
 
+/* ===============================
+   Material 3 Expressive Elevation & Shapes
+   =============================== */
+
+:root {
+	/* Elevation levels aligned to M3 */
+	--elevation-level-0: none;
+	--elevation-level-1: 0px 1px 2px hsl(0 0% 0% / 0.14), 0px 1px 3px 1px hsl(0 0% 0% / 0.12);
+	--elevation-level-2: 0px 2px 4px hsl(0 0% 0% / 0.14), 0px 1px 5px 2px hsl(0 0% 0% / 0.12);
+	--elevation-level-3: 0px 4px 8px hsl(0 0% 0% / 0.14), 0px 2px 6px 2px hsl(0 0% 0% / 0.12);
+	--elevation-level-4: 0px 6px 12px hsl(0 0% 0% / 0.14), 0px 4px 8px 3px hsl(0 0% 0% / 0.12);
+	--elevation-level-5: 0px 8px 16px hsl(0 0% 0% / 0.14), 0px 6px 12px 4px hsl(0 0% 0% / 0.12);
+
+	/* Map to existing shadows */
+	--shadow-soft: var(--elevation-level-2);
+	--shadow-medium: var(--elevation-level-3);
+	--shadow-hard: var(--elevation-level-4);
+
+	/* Ensure expressive shapes */
+	--card-radius: max(var(--card-radius, 12px), 12px);
+	--card-radius-big: max(var(--card-radius-big, 24px), 24px);
+	--message-radius: max(var(--message-radius, 20px), 20px);
+	--button-height: max(var(--button-height, 48px), 48px);
+	--input-height: max(var(--input-height, 44px), 44px);
+	--popout-radius: max(var(--popout-radius, 12px), 12px);
+	--popout-radius-big: max(var(--popout-radius-big, 28px), 28px);
+}
+
 /*# sourceMappingURL=beta.css.map */
