@@ -10,10 +10,10 @@
  * @invite NaN
  */
 
- @import url("C:\Users\Mikey\Downloads\materialcord\source.css");
+ @import url("https://raw.githubusercontent.com/DaDevMikey/material-discord-updated/refs/heads/main/source.css");
 
  /* Material You addon */
- @import url("C:\Users\Mikey\Downloads\materialcord\addons\source.css");
+ @import url("https://raw.githubusercontent.com/DaDevMikey/material-discord-updated/refs/heads/main/addon/source.css");
  
  /* MATERIAL YOU DARK THEME SETTINGS */
  .theme-dark {
@@ -115,3 +115,170 @@
 	 --button-link-accent-color: var(--m3-sys-color-primary);
 	 --button-link-accent-text-color: var(--m3-sys-color-on-primary);
  }
+
+/* ===============================
+   Material 3 Expressive Behaviors
+   =============================== */
+
+/* Adopt M3 motion globally */
+:root {
+	--default-animation: var(--m3-easing-standard);
+	--default-time: var(--m3-duration-medium1);
+}
+
+/* Buttons: emphasized corner growth and elevation on hover */
+:where(.button__201d5,
+.lookFilled__201d5,
+.lookOutlined__201d5,
+.lookInverted_a299dc,
+.button_bba883,
+.barButtonBase__0f481,
+.topicsPillText__0f481,
+.topicsPillCarets__0f481,
+.newMessagesPill__26926,
+.newMessagesClear__308be) {
+	transition:
+		border-radius var(--m3-duration-medium1) var(--m3-easing-emphasized),
+		background-color var(--m3-duration-short2) var(--m3-easing-standard),
+		box-shadow var(--m3-duration-short2) var(--m3-easing-standard),
+		transform var(--m3-duration-short2) var(--m3-easing-emphasized);
+}
+
+:where(.button__201d5,
+.lookFilled__201d5,
+.lookOutlined__201d5,
+.lookInverted_a299dc,
+.button_bba883,
+.barButtonBase__0f481,
+.topicsPillText__0f481,
+.topicsPillCarets__0f481):hover {
+	border-radius: calc(var(--button-radius, 20px) + 6px);
+	box-shadow: var(--shadow-medium);
+}
+
+/* Cards and containers: subtle shape morph and elevation */
+:where(.card_aae012,
+.container__6b38f,
+.container_bd9e38,
+.container_e88f3f,
+.tile__90dc5,
+.tileContainer__71eb2,
+.wrapper_cb9592,
+.popout__669b5,
+.toolbar_bba883,
+.searchResultsWrap_a9e706,
+.searchHeader_f3b986,
+.channelTextAreaInner_fb64c9,
+.scrollableContainer__74017,
+.container__37e49,
+.container_791eb8,
+.container_e131a9,
+.activityPanel_c48ade) {
+	transition:
+		border-radius var(--m3-duration-medium2) var(--m3-easing-emphasized),
+		background-color var(--m3-duration-short2) var(--m3-easing-standard),
+		box-shadow var(--m3-duration-short2) var(--m3-easing-standard);
+}
+
+:where(.card_aae012,
+.container__6b38f,
+.container_bd9e38,
+.container_e88f3f,
+.tile__90dc5,
+.tileContainer__71eb2,
+.wrapper_cb9592,
+.popout__669b5,
+.toolbar_bba883):hover {
+	border-radius: calc(var(--card-radius, 12px) + 6px);
+	box-shadow: var(--shadow-medium);
+}
+
+/* List items and chips: expressive shape on hover */
+:where(.wrapper__2ea32 .link__2ea32,
+.container__91a9d .layout__91a9d,
+.memberListItem_ec58fe,
+.content__07f91,
+.role_b4b2c3,
+.badgeList_ab525a,
+.bar__7aaec,
+.voiceChannelsButton__29444) {
+	transition:
+		border-radius var(--m3-duration-short2) var(--m3-easing-emphasized),
+		background-color var(--m3-duration-short2) var(--m3-easing-standard);
+}
+
+:where(.wrapper__2ea32 .link__2ea32,
+.container__91a9d .layout__91a9d,
+.memberListItem_ec58fe,
+.content__07f91,
+.role_b4b2c3,
+.badgeList_ab525a,
+.bar__7aaec,
+.voiceChannelsButton__29444):hover {
+	border-radius: calc(var(--channel-radius, 21px) + 5px);
+}
+
+/* Inputs: shape morph and outlined focus per M3 */
+:where(.textArea__08bd2,
+.channelTextAreaInner_fb64c9,
+.input__0f084,
+.input__0ed4f,
+.searchBarComponent__35e86) {
+	transition:
+		border-radius var(--m3-duration-short2) var(--m3-easing-emphasized),
+		background-color var(--m3-duration-short2) var(--m3-easing-standard),
+		box-shadow var(--m3-duration-short2) var(--m3-easing-standard),
+		outline-color var(--m3-duration-short2) var(--m3-easing-standard);
+}
+
+:where(.textArea__08bd2,
+.channelTextAreaInner_fb64c9,
+.input__0f084,
+.input__0ed4f,
+.searchBarComponent__35e86):focus-within,
+:where(.textArea__08bd2,
+.channelTextAreaInner_fb64c9,
+.input__0f084,
+.input__0ed4f,
+.searchBarComponent__35e86):focus {
+	border-radius: calc(var(--input-radius, 22px) + 6px);
+	outline: 2px solid hsl(var(--accent-hsl--material-you));
+}
+
+/* State layer overlay for hover/pressed, using currentcolor for automatic contrast */
+:where(.button__201d5,
+.lookFilled__201d5,
+.lookOutlined__201d5,
+.link__2ea32,
+.memberListItem_ec58fe,
+.content__07f91) {
+	position: relative;
+}
+:where(.button__201d5,
+.lookFilled__201d5,
+.lookOutlined__201d5,
+.link__2ea32,
+.memberListItem_ec58fe,
+.content__07f91):after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	background: currentColor;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity var(--m3-duration-short1) var(--m3-easing-standard),
+		border-radius var(--m3-duration-short2) var(--m3-easing-emphasized);
+}
+:where(.button__201d5,
+.lookFilled__201d5,
+.lookOutlined__201d5,
+.link__2ea32,
+.memberListItem_ec58fe,
+.content__07f91):hover:after { opacity: var(--state-hover-opacity); }
+:where(.button__201d5,
+.lookFilled__201d5,
+.lookOutlined__201d5,
+.link__2ea32,
+.memberListItem_ec58fe,
+.content__07f91):active:after { opacity: var(--state-pressed-opacity); }
