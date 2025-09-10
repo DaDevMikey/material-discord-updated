@@ -1,0 +1,117 @@
+/**
+ * @name Material Discord update
+ * @version beta 1.0
+ * @description A theme based on Google's Material Design and Material You
+ * @author DaDevMikey
+ *
+ * @website http://github.com/DaDevMikey
+ * @source unaviable
+ * @donate NaN
+ * @invite NaN
+ */
+
+ @import url("C:\Users\Mikey\Downloads\materialcord\source.css");
+
+ /* Material You addon */
+ @import url("C:\Users\Mikey\Downloads\materialcord\addons\source.css");
+ 
+ /* MATERIAL YOU DARK THEME SETTINGS */
+ .theme-dark {
+	 --saturation-modifier: 0.31;
+	 --lightness-modifier: 0.225;
+	 --text-lightness-modifier: 1.0;
+	 --ui-darkness-modifier: 1.0;
+ }
+ 
+ /* MATERIAL YOU LIGHT THEME SETTINGS */
+ .theme-light {
+	 --saturation-modifier: 0.74;
+	 --lightness-modifier: 2.125;
+	 --text-lightness-modifier: 1.0;
+ }
+ 
+ :root {
+	 /* ACCENT HSL AND TEXT COLOR SETTINGS */
+	 --accent-hue: 227;
+	 --accent-saturation: 71%;
+	 --accent-lightness: 61%;
+	 --accent-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
+	 --accent-button-action: hsl(0,0%,100%);
+ 
+	 /* ALERT HSL AND TEXT COLOR SETTINGS */
+	 --alert-hue: 0;
+	 --alert-saturation: 85%;
+	 --alert-lightness: 61%;
+	 --alert-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
+ 
+	 /* WARNING HSL AND TEXT COLOR SETTINGS*/
+	 --warning-hue: 40;
+	 --warning-saturation: 86.4%;
+	 --warning-lightness: 56.9%;
+	 --warning-text-color: hsl(0,0%,100%); /* DOES NOTHING WITH MATERIAL YOU ENABLED */
+ 
+	 /* MESSAGE SETTINGS */
+	 --message-radius: 20px; /* M3 Expressive larger shape */
+	 --message-padding-top: 10px;
+	 --message-padding-side: 14px;
+ 
+	 /* MESSAGE MEDIA SETTINGS */
+	 --media-radius: 12px; /* M3 Expressive */
+ 
+	 /* CARD SETTINGS */
+	 --card-radius: 12px; /* M3 default large shape */
+	 --card-radius-big: 24px; /* Expressive large */
+ 
+	 /* BUTTON SETTINGS */
+	 --button-height: 48px; /* Expressive, taller buttons */
+	 --button-padding: 0 20px;
+	 --button-action-color: hsl(0,0%,100%);
+ 
+	 /* INPUT SETTINGS */
+	 --input-height: 44px;
+	 --input-padding: 0 14px;
+ 
+	 /* POPOUT AND MODAL SETTINGS */
+	 --popout-radius: 12px; /* M3 container shape */
+	 --popout-radius-big: 28px; /* Expressive */
+ 
+	 /* TOOLTIP SETTINGS */
+	 --tooltip-color: hsl(0,0%,38%,0.9);
+	 --tooltip-text-color: hsl(0,0%,87%);
+	 --tooltip-font-size: 12px;
+	 --tooltip-padding: 8px;
+	 --tooltip-radius: 8px;
+ 
+	 /* SCROLLBAR SETTINGS */
+	 --scrollbar-width: 10px;
+	 --scrollbar-thin-width: 6px;
+ 
+	 /* Material 3 Expressive: motion and state layers */
+	 --m3-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+	 --m3-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+	 --m3-duration-short1: 150ms;
+	 --m3-duration-short2: 200ms;
+	 --m3-duration-medium1: 250ms;
+	 --m3-duration-medium2: 300ms;
+	 --m3-duration-long1: 400ms;
+	 --m3-duration-long2: 500ms;
+	 --state-hover-opacity: 0.08;
+	 --state-focus-opacity: 0.12;
+	 --state-pressed-opacity: 0.12;
+	 --state-dragged-opacity: 0.16;
+ 
+	 /* Material 3 Expressive: color roles mapped to existing theme tokens */
+	 --m3-sys-color-primary: hsl(var(--accent-hue), var(--accent-saturation), var(--accent-lightness));
+	 --m3-sys-color-on-primary: var(--accent-text-color);
+	 --m3-sys-color-secondary: hsl(var(--accent-hue), calc(var(--accent-saturation) * 0.45), calc(var(--accent-lightness) * 0.85));
+	 --m3-sys-color-on-secondary: hsl(0,0%,10%);
+	 --m3-sys-color-surface: var(--main-color);
+	 --m3-sys-color-surface-container-low: color-mix(in hsl, var(--main-color) 85%, var(--accent-button-action) 15%);
+	 --m3-sys-color-surface-container: color-mix(in hsl, var(--main-color) 75%, var(--accent-button-action) 25%);
+	 --m3-sys-color-surface-container-high: color-mix(in hsl, var(--main-color) 60%, var(--accent-button-action) 40%);
+	 --m3-sys-color-outline: hsl(0,0%,50%);
+ 
+	 /* Map core component colors to M3 roles */
+	 --button-link-accent-color: var(--m3-sys-color-primary);
+	 --button-link-accent-text-color: var(--m3-sys-color-on-primary);
+ }
